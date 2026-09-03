@@ -233,32 +233,3 @@ Client ← Response ────┘
        ↑
  HTTP Methods
 
-Ekdum short revision
-Node.js     → Backend ke liye JavaScript runtime
-
-npm init    → Project initialize karta hai
-
-npm i express → Express install karta hai
-
-Express     → Node.js mein server/API banana easy karta hai
-
-listen()    → Server ko port par requests listen karne ke liye start karta hai
-
-Port        → Network traffic ko particular service tak pahunchane mein help karta hai
-
-req         → Client → Backend request
-
-res         → Backend → Client response
-
-API         → Applications ke communication ka interface/rules
-
-HTTP        → Communication protocol
-
-GET/POST/
-PUT/PATCH/
-DELETE      → HTTP methods
-
-REST        → API design karne ka architectural style
-
-REST API    → REST principles follow karne wali API
-
