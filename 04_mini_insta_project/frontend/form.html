@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="">
+        <input type="text" id="caption" placeholder="post name....">
+        <input type="file" name="" id="image_file">
+        <input type="submit" value="submit" id="submit">
+    </form>
+
+    <script>
+        const caption = document.querySelector('#caption')
+        const image = document.querySelector('#image_file')
+       const form = document.querySelector('form')
+
+       form.addEventListener('submit',async (e)=>{
+
+
+        e.preventDefault()
+
+       
+
+        let formData = new FormData()
+
+        formData.append('caption', caption.value)
+        formData.append('image', image.files[0])
+
+        const response = await fetch('http://localhost:3000/create-post', {
+            method: 'POST',
+            body: formData
+        })
+       
+        const data  = await response.json()
+        console.log(data)
+        form.reset()
+        
+        alert('form submitted')
+
+       })
+        
+    </script>
+</body>
+</html>
